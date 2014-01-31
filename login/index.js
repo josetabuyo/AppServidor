@@ -3,6 +3,6 @@ var app = module.exports =  express();
 
 
 app.get('/login', function(req, res){
-	res.sendfile("login/cliForm.html");
+	res.send("Holaaaaaa");
 	console.log('se ejecutó el action');
 });
