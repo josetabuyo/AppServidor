@@ -1,10 +1,6 @@
 var express = require('express');
 var app = express();
 
-var login = require('./login');
-app.use(login);
-
-
 
 //allowCrossDomain
 app.use(function(req, res, next) {
@@ -13,6 +9,10 @@ app.use(function(req, res, next) {
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
 });
+
+
+var login = require('./login');
+app.use(login);
 
 
 app.get('/', function(req, res){
